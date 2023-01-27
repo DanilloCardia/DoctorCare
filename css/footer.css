@@ -1,0 +1,28 @@
+/* FOOTER */
+#footer {
+  background: var(--primary-color);
+}
+#footer .wrapper {
+  padding-block: 6rem;
+}
+#footer .logo-footer {
+  text-align: left;
+  padding-bottom: 2.4rem;
+}
+#footer header {
+  display: flex;
+  text-align: left;
+  margin-bottom: 3.2rem;
+}
+#footer header ul li {
+  color: white;
+  font-weight: 400;
+  line-height: 2.1rem;
+}
+#footer header ul li:nth-child(1) {
+  margin-bottom: 1.2rem;
+}
+#footer .content ul {
+  display: flex;
+  gap: 3.2rem;
+}

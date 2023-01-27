@@ -1,0 +1,24 @@
+/* NAVIGATION */
+nav {
+  height: var(--nav-hight);
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+}
+nav .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+/* NAVIGATION SCROLL*/
+nav.scroll {
+  background: var(--primary-color);
+}

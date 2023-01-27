@@ -1,0 +1,14 @@
+/* ABOUT */
+#about {
+  background: var(--brand-beige);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+#about h2 {
+  width: 32.7rem;
+  margin-bottom: 2.4rem;
+}
+#about p {
+  margin-bottom: 6rem;
+}

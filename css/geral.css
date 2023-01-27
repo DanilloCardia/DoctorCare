@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* CORES */
+  --hue: 30;
+
+  --primary-color: hsl(var(--hue), 100%, 26%);
+  --secondary-color: hsl(calc(var(--hue) - 22), 23%, 89%);
+  --brand-green-hover: hsl(var(--hue), 100%, 14%);
+  --brand-green-light-02: hsl(180, 14%, 97%);
+  --brand-beige: hsl(39, 100%, 97%);
+  --gray-paragraph: hsl(210, 9%, 31%);
+  --gray-headline: hsl(210, 11%, 15%);
+
+  /* NAVI HIGHT */
+  --nav-hight: 7.2rem;
+
+  /* FONTES */
+  font-size: 62.5%; // regra de 3 para converter os 16px padrão da fonte do browser para 10px: 10 * 100 / 16 = 62.5 (1rem = 10px).
+}
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: 'DM sans';
+  font-size: 1.6rem;
+  text-align: center;
+  overflow: overlay;
+  background: hsl(180, 14%, 97%);
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+section {
+  padding-block: 10rem;
+}
+img {
+  max-width: 100%;
+}
+section header h4 {
+  font-size: 1.4rem;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+section header h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+  color: var(--gray-headline);
+}
+p {
+  line-height: 150%;
+  color: var(--gray-paragraph);
+}
+nav .menu-mobile,
+.close-menu {
+  position: fixed;
+}
+.wrapper {
+  /* min() recebe 2 valores. o menor valor exe: 50rem (min) e o segundo valor de 100%. menor que 50rem pegue os 100% maior que 50rem, permanece 50rem */ /* before the changed width: 37.5rem;  */
+  width: min(50rem, 100%);
+  padding-inline: 2.4rem;
+  margin-inline: auto;
+}
+/* CUSTOM COLORS */
+#services .card circle {
+  fill: var(--secondary-color);
+}
+#navigation .logo path[fill*='#00856F'],
+#backToTopButton svg circle {
+  fill: var(--primary-color);
+}
+#contact ul li path {
+  stroke: var(--primary-color);
+}
+#testimonials path {
+  fill: var(--primary-color);
+}
+body.menu-expanded #navigation .logo path,
+#navigation.scroll .logo path {
+  fill: white;
+}
+#navigation button path[stroke*='#00856F'] {
+  stroke: var(--primary-color);
+}
+#navigation.scroll button path {
+  stroke: white;
+}
+
+/* MENU-EXPANDED */
+body.menu-expanded {
+  overflow: hidden;
+}
+
+.menu-mobile {
+  transform: translateY(100%);
+}
+
+.menu-mobile,
+.close-menu,
+body.menu-expanded .open-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expanded .menu-mobile,
+body.menu-expanded .close-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.menu-expanded .menu-mobile {
+  /* Before the change position: fixed; */
+  top: 0;
+  left: 0;
+  background: var(--primary-color);
+  width: 100vw;
+  height: 100vh;
+  padding-top: var(--nav-hight);
+  transition: transform 300ms;
+  transform: translateY(0);
+}
+body.menu-expanded .logo,
+body.menu-expanded button {
+  position: relative;
+  z-index: 10;
+}
+.menu-expanded a.button:hover {
+  background: var(--primary-color);
+  color: white;
+  transition: 400ms;
+  filter: brightness(1.4);
+}
+body.menu-expanded .logo path {
+  fill: white;
+}
+body.menu-expanded button path {
+  stroke: white;
+}
+
+.menu-mobile ul:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4.8rem;
+  margin-top: 6rem;
+}
+.menu-mobile ul li a {
+  color: white;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+  font-weight: 700;
+}
+.menu-mobile .button {
+  background: white;
+  padding: 1.6rem 3.2rem;
+  margin-top: 4.8rem;
+  margin-bottom: 8rem;
+  border-radius: 4rem;
+  display: inline-block;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.3rem;
+  text-transform: uppercase;
+}
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
+/* BACK TO TOP BUTTON */
+
+#backToTopButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 2.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: 400ms;
+}
+
+#backToTopButton.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}

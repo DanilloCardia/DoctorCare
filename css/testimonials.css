@@ -1,0 +1,26 @@
+/* TESTIMONIALS */
+#testimonials {
+  background: hsl(180, 14%, 97%);
+}
+#testimonials header {
+  margin-bottom: 6.7rem;
+}
+#testimonials header p {
+  margin-top: 2.4rem;
+  margin-bottom: 6.7rem;
+}
+#testimonials .testimonial {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+#testimonials .testimonial p {
+  margin-block: 2rem;
+}
+#testimonials .testimonial ul li {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
